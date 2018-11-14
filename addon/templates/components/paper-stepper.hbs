@@ -6,6 +6,9 @@
 
   <md-steppers-content class="md-steppers-content {{unless vertical "layout-column"}}">
     {{yield (hash
+      api=(hash
+        navigateTo=(action goTo)
+      )
       step=(component stepComponent
         currentStep=currentStep
         linear=linear
